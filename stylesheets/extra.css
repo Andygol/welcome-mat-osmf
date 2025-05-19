@@ -1,0 +1,59 @@
+:root {
+    --md-primary-fg-color:        #7EBC6F;
+    --md-primary-fg-color--light: #9CCB90;
+    --md-primary-fg-color--dark:  #415D43;
+  }
+
+/* [data-md-color-scheme="slate"] {
+  --md-hue: 210;
+} */
+
+.grid-container {
+    grid-gap: .4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    margin: 1em 0
+}
+
+.grid-container > div {
+    border: .05rem solid var(--md-default-fg-color--lightest);
+    border-radius: .1rem;
+    display: block;
+    margin: 0;
+    padding: 0 .8rem 0;
+    transition:border .25s, box-shadow .25s
+}
+
+.grid-container > div > hr {
+    margin-bottom: 1em;
+    margin-top: 1em
+}
+
+.item-title {
+    font-size: x-large;
+    color: var(--md-admonition-fg-color);
+}
+
+.item-desc {
+    color: #a9a9a9;
+}
+
+.tile {
+    cursor: pointer;
+    position: relative;
+}
+
+.link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.tile:hover,
+.tile:focus-within {
+    border-color: var( --md-primary-fg-color);
+    box-shadow: var(--md-shadow-z2)
+}
